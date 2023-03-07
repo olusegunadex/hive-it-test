@@ -1,38 +1,583 @@
-.App {
+.address-book {
+  width: 70%;
+  padding: 0 50px;
+}
+
+.add-address {
+  width: 25%;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #297373;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.add-address button {
+  background-color: #297373;
+  color: #fff;
+  font-size: 18px;
+  width: 60%;
+  height: 44px;
+  padding: 0 30px;
+  border-radius: 5px;
+  border: none;
+  font-family: "Roboto Slab", serif;
+}
+
+.add-address button:hover {
+  background-color: #262626;
+  cursor: pointer;
+}
+
+.address-list {
+  margin: 60px 0;
+  padding: 10px 0;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #297373;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.add-another {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: fit-content;
+  width: 25%;
+  padding: 60px 0 60px 0;
+  background: #ffffff;
+  border: 1px solid #297373;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.add-another h4 {
+  color: #297373;
+  font-size: 18px;
+}
+
+.add-another button {
+  background-color: #297373;
+  width: 60%;
+  color: #fff;
+  font-size: 18px;
+  width: 60%;
+  height: 44px;
+  padding: 0 30px;
+  border-radius: 5px;
+  border: none;
+  font-family: "Roboto Slab", serif;
+}
+
+.add-another button:hover {
+  background-color: #262626;
+  cursor: pointer;
+  font-size: 18px;
+  width: 60%;
+  height: 44px;
+  padding: 0 30px;
+  border-radius: 5px;
+  border: none;
+  font-family: "Roboto Slab", serif;
+}
+
+.app-body {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+}
+
+.address-box {
+  flex-basis: calc((100% - 5%) / 3);
+  box-sizing: border-box;
+  width: 24%;
+  padding: 5px 0;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #297373;
+  border-radius: 4px;
+  opacity: 1;
+  margin-bottom: 20px;
+}
+
+.address-box div {
+  width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.filter-info {
+  font-size: 14px;
+  color: #297373;
+}
+
+.filter-clear {
+  font-size: 14px;
+  color: #ed6d63;
+  cursor: pointer;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: fit-content;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.font-400 {
+  font-weight: 400;
+}
+h2 {
+  margin: 0;
+  font-size: 27px;
+  font-weight: 300;
+}
+
+.input-class {
+  height: 55px;
+  margin: 5px 0;
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-weight: 300;
+  background-color: #7fabab1d;
+  border: none;
+  border-radius: 4px;
+  padding: 0 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+label,
+p {
+  font-size: 18px;
+  font-style: regular;
+  font-weight: 400;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+.margin-5 {
+  margin: 5px 0;
+}
+
+.margin-bottom-10 {
+  margin: 10px 0;
+}
+
+.margin-50 {
+  margin: 50px 0;
+}
+
+.search-box {
+}
+
+.search-box input {
+  height: 44px;
+  width: 75%;
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  background-color: #7fabab1d;
+  border: none;
+  border-radius: 4px;
+  padding: 0 10px;
+}
+
+.search-box button {
+  height: 44px;
+  width: 30%;
+  background-color: #297373;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+}
+
+.search-box button:hover {
+  background-color: #262626;
+  cursor: pointer;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #297373;
+  font-weight: 400;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-right {
+  text-align: right;
+  margin: 20px 0;
+}
+
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.top-bar {
+  background-color: #262626;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
   color: white;
+  height: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  font-size: 61px;
+  margin: 30px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.address-book {
+  width: 70%;
+  padding: 0 50px;
+}
+
+.address-list {
+  margin: 60px 0;
+  padding: 10px 0;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #297373;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.app-body {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+}
+
+.error {
+  color: #ed6d63;
+  padding-left: 10px;
+}
+
+.error-input {
+  background-color: #f4a7a1 !important;
+  width: 100%;
+  box-sizing: border-box;
+  height: 55px;
+  margin: 5px 0;
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  padding: 0 10px;
+}
+
+/* .flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+h2 {
+  margin: 0;
+  font-size: 27px;
+  font-weight: 300;
+}
+
+label,
+p {
+  font-size: 18px;
+  font-style: regular;
+  font-weight: 400;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+.margin-bottom-10 {
+  margin: 10px 0;
+}
+
+.margin-50 {
+  margin: 50px 0;
+}
+
+.search-box {
+}
+
+.search-box input {
+  height: 44px;
+  width: 70%;
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  background-color: #7fabab1d;
+  border: none;
+  border-radius: 4px;
+  padding: 0 10px;
+}
+
+.search-box button {
+  height: 44px;
+  width: 30%;
+  background-color: #297373;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+}
+
+.single-address {
+  padding: 20px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #297373;
+  font-weight: 400;
+}
+
+.margin-5 {
+  margin: 5px 0;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-heading {
+  margin-bottom: 20px;
+}
+
+.top-bar {
+  background-color: #262626;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 30px;
+}
+
+.title {
+  font-size: 61px;
+  margin: 30px;
+  text-align: center;
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .app-body {
+    display: flex;
+    gap: 5%;
+    font-size: 16px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .address-book {
+    width: 62%;
+    padding: 0;
+  }
+
+  .add-address {
+    padding: 15px;
+    width: 30%;
+  }
+
+  p,
+  label,
+  div {
+    font-size: 16px;
+  }
+
+  .add-address input {
+    height: 44px;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .add-address button {
+    width: 100%;
+    margin-top: 5px;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .address-box {
+    margin-bottom: 10px;
+    flex-basis: calc((100% - 5%) / 2);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #297373;
+    border-radius: 4px;
+    opacity: 1;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+
+  .single-address {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0 5%;
+    justify-content: center;
+  }
+
+  .top-bar {
+    display: none;
+  }
+
+  .app-body {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .address-book {
+    margin-top: 50px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .add-address {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .add-address input {
+    width: 100%;
+  }
+
+  .add-address button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .address-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .single-address {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    margin: 0 3%;
+    justify-content: center;
+  }
+
+  .top-bar {
+    display: none;
+  }
+
+  .app-body {
+    flex-direction: column;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  p,
+  label {
+    font-size: 14px;
+  }
+  .address-book {
+    margin-top: 50px;
+    width: 100%;
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .add-address {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .add-address input {
+    font-size: 14px;
+    height: 40px;
+  }
+
+  .add-address button {
+    font-size: 14px;
+  }
+
+  .add-address input {
+    width: 100%;
+  }
+
+  .add-address button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .address-box {
+    margin-bottom: 10px;
+    flex-basis: calc((100% - 5%) / 2);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #297373;
+    border-radius: 4px;
+    opacity: 1;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+
+  .flex-wrap {
+    gap: 5%;
+  }
+
+  .search-box input {
+    font-size: 14px;
+    height: 40px;
+  }
+
+  .search-box button {
+    font-size: 14px;
+    height: 40px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .title {
+    font-size: 32px;
   }
 }
