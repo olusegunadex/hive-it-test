@@ -439,6 +439,28 @@ p {
     justify-content: space-between;
   }
 
+  .add-another {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    width: 30%;
+    padding: 60px 0 60px 0;
+    background: #ffffff;
+    border: 1px solid #297373;
+    border-radius: 4px;
+    opacity: 1;
+  }
+
+  .add-another h4 {
+    font-size: 18px;
+  }
+
+  .add-another button {
+    font-size: 16px;
+    height: 44px;
+  }
+
   .single-address {
     width: 100%;
   }
@@ -483,6 +505,28 @@ p {
   .address-box {
     width: 100%;
     margin-bottom: 10px;
+  }
+
+  .add-another {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+    padding: 60px 0 60px 0;
+    background: #ffffff;
+    border: 1px solid #297373;
+    border-radius: 4px;
+    opacity: 1;
+  }
+
+  .add-another h4 {
+    font-size: 16px;
+  }
+
+  .add-another button {
+    font-size: 16px;
+    height: 44px;
   }
 
   .single-address {
@@ -556,6 +600,28 @@ p {
     opacity: 1;
     margin-bottom: 20px;
     justify-content: space-between;
+  }
+
+  .add-another {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+    padding: 60px 0 60px 0;
+    background: #ffffff;
+    border: 1px solid #297373;
+    border-radius: 4px;
+    opacity: 1;
+  }
+
+  .add-another h4 {
+    font-size: 14px;
+  }
+
+  .add-another button {
+    font-size: 14px;
+    height: 44px;
   }
 
   .flex-wrap {
