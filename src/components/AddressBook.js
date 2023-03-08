@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import UserInfo from "./UserInfo";
 import { AddressContext } from "../config/AppContext";
+import UpdateDetails from "./UpdateDetails";
 
 const AddressBook = () => {
   const {
@@ -67,6 +68,8 @@ const AddressBook = () => {
           </div>
         )}
       </div>
+
+      <UpdateDetails />
     </div>
   );
 };
