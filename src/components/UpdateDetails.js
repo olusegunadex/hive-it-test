@@ -1,8 +1,9 @@
 import { useContext, useState } from "react";
 
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+
 import Modal from "@mui/material/Modal";
 import { AddressContext } from "../config/AppContext";
 
@@ -11,7 +12,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  // width: 400,
   bgcolor: "background.paper",
   border: "2px solid #297373",
   boxShadow: 24,
@@ -74,7 +75,7 @@ const UpdateDetails = (address) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={style} className="modal-class">
           <div className="">
             <div className="sub-heading">
               <h2>Update or delete details</h2>
