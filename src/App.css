@@ -104,6 +104,12 @@
   overflow-wrap: anywhere;
 }
 
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .edit-icon-position {
   position: relative;
 }
@@ -415,6 +421,10 @@ p {
 
 .modal-class {
   width: 40% !important;
+}
+
+.relative-position {
+  position: relative;
 }
 
 .space-between {

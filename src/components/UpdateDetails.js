@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 
 import Modal from "@mui/material/Modal";
 import { AddressContext } from "../config/AppContext";
+import { FaWindowClose } from "react-icons/fa";
 
 const style = {
   position: "absolute",
@@ -85,7 +86,8 @@ const UpdateDetails = (address) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="modal-class">
-          <div className="">
+          <div className="relative-position">
+            <FaWindowClose className="edit-icon" onClick={handleClose} />
             <div className="sub-heading">
               <h2>Update or delete details</h2>
             </div>
