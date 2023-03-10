@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
@@ -37,6 +37,15 @@ const UpdateDetails = (address) => {
     newLastName: singleUserAddress.lastName,
     newEmail: singleUserAddress.email,
   });
+
+  useEffect(() => {
+    setUpdateData({
+      id: singleUserAddress.id,
+      newFirstName: singleUserAddress.firstName,
+      newLastName: singleUserAddress.lastName,
+      newEmail: singleUserAddress.email,
+    });
+  }, [singleUserAddress]);
 
   const { id, newFirstName, newLastName, newEmail } = updateData;
 
@@ -80,52 +89,54 @@ const UpdateDetails = (address) => {
             <div className="sub-heading">
               <h2>Update or delete details</h2>
             </div>
-            <form className="flex-column">
-              <div>
-                <label>First Name</label>
-                <input
-                  type="text"
-                  placeholder={singleUserAddress.firstName}
-                  value={newFirstName}
-                  name="newFirstName"
-                  onChange={onChange}
-                  className="input-class"
-                />
-              </div>
+            {updateData ? (
+              <form className="flex-column">
+                <div>
+                  <label>First Name</label>
+                  <input
+                    type="text"
+                    placeholder={singleUserAddress.firstName}
+                    value={newFirstName}
+                    name="newFirstName"
+                    onChange={onChange}
+                    className="input-class"
+                  />
+                </div>
 
-              <div>
-                <label>Last Name</label>
-                <input
-                  type="text"
-                  placeholder={singleUserAddress.lastName}
-                  value={newLastName}
-                  name="newLastName"
-                  onChange={onChange}
-                  className="input-class"
-                />
-              </div>
+                <div>
+                  <label>Last Name</label>
+                  <input
+                    type="text"
+                    placeholder={singleUserAddress.lastName}
+                    value={newLastName}
+                    name="newLastName"
+                    onChange={onChange}
+                    className="input-class"
+                  />
+                </div>
 
-              <div>
-                <label>Email</label>
-                <input
-                  type="text"
-                  placeholder={singleUserAddress.email}
-                  value={newEmail}
-                  name="newEmail"
-                  onChange={onChange}
-                  className="input-class"
-                />
-              </div>
+                <div>
+                  <label>Email</label>
+                  <input
+                    type="text"
+                    placeholder={singleUserAddress.email}
+                    value={newEmail}
+                    name="newEmail"
+                    onChange={onChange}
+                    className="input-class"
+                  />
+                </div>
 
-              <div className="text-right">
-                <button className="update-button" onClick={handleSubmit}>
-                  Update{" "}
-                </button>
-                <button className="delete-button" onClick={handleDelete}>
-                  Delete
-                </button>
-              </div>
-            </form>
+                <div className="text-right">
+                  <button className="update-button" onClick={handleSubmit}>
+                    Update{" "}
+                  </button>
+                  <button className="delete-button" onClick={handleDelete}>
+                    Delete
+                  </button>
+                </div>
+              </form>
+            ) : null}
           </div>
         </Box>
       </Modal>
